@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta htp-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+		<title>Geno Co</title>
+		<!--<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">-->
+		<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="stylesheet" href="style/main.css">
+	</head>
+
+	<body>
+	
+		<!-- Navigation bar-->
+		<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container-fluid">
+			<div class="navbar-header">
+				<!--Collapse buttton-->
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/android-icon-36x36.png"></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#" data-toggle="popover" title="Error 404" data-content="Ooops! This item is still being processed. Sorry:)" data-placement="bottom">About us</a></li>
+					<li><a href="#" data-toggle="popover" title="Error 404" data-content="Ooops! This item is still being processed. Sorry:)" data-placement="bottom">Contact us</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Workshop
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Gallery</a></li>
+							<li><a href="#">Own Projects</a></li>
+							<li role="separator" class="divider"></li>
+							<li role="dropdown-header" style="margin-left:20px"><span class="fa fa-female" aria-hidden="true" ></span> Female items</li>
+							<li><a href="#">Dresses</a></li>
+							<li><a href="#">Trousers</a></li>
+							<li><a href="#">Skirts</a></li>
+							<li><a href="#">Blazers</a></li>
+							<li role="separator" class="divider"></li>
+							<li role="dropdown-header" style="margin-left:20px"><span class="fa fa-male" aria-hidden="true" ></span> Male items</li>
+							<li><a href="#">Jackets</a></li>
+							<li><a href="#">Trousers</a></li>
+							<li role="separator" class="divider"></li>
+							<li role="dropdown-header" style="margin-left:20px"><span class="fa fa-star-half-o" aria-hidden="true" ></span> Unisex items</li>
+							<li><a href="#">Coats</a></li>
+							<li><a href="#">T-shorts</a></li>
+							<li><a href="#">Shoes</a></li>
+							<li><a href="#">Underwave</a></li>
+							<li role="separator" class="divider"></li>
+							<li role="dropdown-header" style="margin-left:20px"><span class="fa fa-cogs" aria-hidden="true" ></span> Accessories</li>
+							<li><a href="#">Belts</a></li>
+							<li><a href="#">Badges</a></li>
+							<li><a href="#">Brooches</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right" style="margin-right: 10px; margin-top: 7px">
+					<form class="form-inline">
+						<input class="form-control mr-sm-2" type="text" placeholder="Enter an ID of the item">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="popover" title="Error 404" data-content="Ooops! This item is still being processed. Sorry:)" data-placement="bottom"><span class="fa fa-search" aria-hidden="true"></span> Search</button>
+						<button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" id="login-button"><span class="fa fa-sign-in"></span> Login</button>
+					</form>
+				</ul>
+			</div>
+			</div>
+		</nav>
+
+		<!--Modal LOGIN-->
+		<div id="loginModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!--Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Login</h4>
+					</div>
+					<div class="model-body">
+						<form class="form-inline" role="form">
+							<div class="form-group row" style="
+							margin-left: 30px; margin-top:30px">
+								<div class="form-group">
+									<label class="sr-only" for="email"></label>
+									<input type="email" class="form-control" id=email placeholder="Email">
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="password">Password</label>
+									<input type="password" class="form-control" id="password" placeholder="Password">
+								</div>
+							</div>
+							<div class="form-group row" style="margin-left: 30px; margin-top:30px; margin-bottom:30px">
+								<button type ="submit" class="btn btn-primary" data-toggle="popover" title="Error 404" data-content="Ooops! This item is still being processed. Sorry:)" data-placement="bottom">Sign in</button>
+								<button type ="submit" class="btn btn-default" data-toggle="popover" title="Error 404" data-content="Ooops! This item is still being processed. Sorry:)" data-placement="bottom">Registration</button>
+								<div class="checkbox">
+									<label><input type="checkbox"><span>&nbsp;Remember me</span></label>
+								</div>
+							</div>
+							<div class="alert alert-warning alert-dismissible" role="alert" style="margin-left: 30px; margin-right:30px">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<strong>Warning!</strong> Please read
+								<a href="#" class="alert-link">confidentiality politic</a>
+								before registration or first login. Have a good day!
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="mycarousel" class="carousel container-fluid slide" data-pause="false">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+
+			<div class="carousel-inner">
+				<div class="active item">
+					<div class="img-block">
+						<img src="img/slide_one.jpg" align="middle"/>
+					</div>
+
+					<div class="banner">
+						<div class="banner-header amatic-font">Imagine the outcome!</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="img-block">
+						<img src="img/slide_two.jpg" align="middle"/>
+					</div>
+
+					<div class="banner">
+						<div class="banner-header amatic-font">Be a creator!</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="img-block">
+						<img src="img/slide_three.jpg" align="middle"/>
+					</div>
+
+					<div class="banner">
+						<div class="banner-header amatic-font">Rule your universe!</div>
+					</div>
+				</div>
+			</div>
+
+			<a class="left carousel-control control-s" href="#mycarousel" role="button" data-slide="prev">
+				<span class="fa fa-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control control-s" href="#mycarousel" role="button" data-slide="next">
+				<span class="fa fa-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+
+		<div class="container">
+
+			<div class="row-content">
+
+				<div class="well">
+					<blockquote>
+						<p>I believe that imagination is stronger than knowledge. That myth is more potent than history. That dreams are more powerful than facts. That hope always triumphs over experience. That laughter is the only cure for grief. And I believe that love is stronger than death.</p>
+						<footer>
+							Robert Fulghum,
+							<cite title="Source Title">All I Really Need to Know I Learned in Kindergarten: Uncommon Thoughts on Common Things, May 4, 2004</cite>
+						</footer>
+					</blockquote>
+				</div>
+
+			</div>
+
+			<div class="row-content">
+				<div class="col-xs-12">
+					<div class="separator">
+						<div class="left-separator"></div>
+						<div class="cog">
+							<div class="gear-wrapper">
+								<span class="fa fa-gear fa-2x "></span>
+							</div>
+						</div>
+						<div class="right-separator"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-content">
+
+				<div class="col-xs-12 col-sm-12">
+					<h2 align="left">Popular items section</h2>
+					<br>
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#best-item" aria-controls="home" role="tab" data-toggle="tab" class="bg-one">Product of current week</a>
+						</li>
+						<li role="presentation">
+							<a href="#work-shop" aria-controls="profile" role="tab" data-toggle="tab" class="bg-two">Current project in process</a>
+						</li>
+						<li role="presentation">
+							<a href="#deliver-y" aria-controls="messages" role="tab" data-toggle="tab" class="bg-three">Delivery System</a>
+						</li>
+						<li role="presentation">
+							<a href="#best-employee" aria-controls="settings" role="tab" data-toggle="tab" class="bg-four">Employee of this week</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active bg-one" id="best-item">
+							<div class="media-left media-middle">
+								<img src="img/dress.jpg" class="media-object img-thumbnail img-responsive" height="215px" width="215px">
+							</div>
+							<div class="media-body">
+								<h4 align="left">Addo re haec ii unum idem ex cera sumi ob</h4>
+								<a href="#"><span class="label label-info label-xs">Dresses</span></a>
+								<a href="#"><span class="label label-primary label-xs">Buy now</span></a>
+								<span class="badge">$79.99</span>
+								<p>Progressus praesertim quantumvis an ad exhibentur ne vigilantes materialis. Partes firmum simile ibidem paucis lus dicunt lor quo uno. Contingere apprehendo majestatis eo requiratur sequuturum facillimum ex. Satis signa nec recte donec iii demus debet. Deveniri meditari partibus mo reliquas ii admittit. Consuetudo at ut imaginatio vigilantes. Agnoscitur sap excogitent distinctae duo.</p>
+								<p>Cavendum exhibent hoc vul his automata nocturna interire. Cum lapidem judicia rea accepit cui caeteri. Credendi paritura quicquid iii cessarem concipio ero. Quocunque existenti judicarem is mo ha extendere conceptum requirunt. In an videlicet priusquam suspicari evidentes animalium habeantur. Nihilum discere ab de humanum videmus quoties. Verbis cau vel durent utiles. Imaginata se ut im discrimen disputari. Tur fal ante eae erit poni. Co quamvis ad sentiat scripta necesse fallere visione.</p>							</div>
+						</div>
+							<div role="tabpanel" class="tab-pane fade bg-two" id="work-shop">
+								<div class="media-left media-middle">
+									<img src="img/project.jpg" class="media-object img-thumbnail img-responsive" height="115px" width="115px">
+								</div>
+								<div class="media-body">
+									<h4 align="left">Ha et diligenter devenietur perspicuae indefinite de at scripturis</h4>
+									<a href="#"><span class="label label-info label-xs">Own projects</span></a>
+									<a href="#"><span class="label label-primary label-xs">Terms</span></a>
+									<p>Scirem longum mediam ei demens capram easdem re. Cujuspiam nos tractatur concludam vix tot vereorque venientia vul. Ut to entis terea utile coeco novum ea du eorum. Innatas petitis et gi se at alienis constet similia utraque. Qua alium etc fidem eam venti his ipsum fecto. Imo est sibi suam pati nova tius. Deo quo jam agendis mutatur lor prorsus. Qua hae denegassem pro artificium deprehendi nul. Nos duo vul fidam tamen eas terea erant tanta utrum. Inhaereat obstinate vox archimede dem duo.</p>
+
+									<p>Rantem necdum cumque una cap eamque sum vitiis. Hos heri ipsi novi est hoc aspi cum. Rom nul potuit non fueram animam. Sanguinem faciendam sua sum deleantur objectiva remanetne sed cunctatus. Opiniones examinare aggrediar naturales dat desumptas dem. Durent vacabo eo negans de paucos ex. Pudeat ha in attigi putare ad de.</p>
+								</div>
+							</div>
+						<div role="tabpanel" class="tab-pane fade bg-three" id="deliver-y">
+							<div class="media-left media-middle">
+								<img src="img/delivery.jpg" class="media-object img-thumbnail img-responsive" height="265px" width="265px">
+							</div>
+							<div class="media-body">
+								<h4 align="left">Quos et illa ut quam</h4>
+								<a href="#"><span class="label label-danger label-xs">New</span></a>
+								<p>Neque fieri horum errem ab me eo credo. Hanc sic meo quae ipsa. Fal membrorum existenti conservet per sapientia dubitavit. Apta gi de et enim gnum data. Id quadratam ut archimede attingere re ne. Humanam infusum has iis veteris mei occasio replere istarum. Emanant poterit capaces at in numerum de exigere ob chartam.</p>
+								<p>Cur convenit formemus profecto cui totamque cap sequatur hic. Appello nam sim humanum ferenda maximam. Quo tale more qui ideo fuse veri nunc. Effingo in optimae ea fuerunt ut de gallico liberam amplius. Age fore ope utor nemo plus hinc quam. Tanto cogit color ii minus ii tamen neque. Durationem me ad ha at blandisque commendare. Latera augeri restat sapere de ei ob mo.</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade bg-four" id="best-employee">
+							<div class="media-left media-middle">
+								<img src="img/employee.jpg" class="media-object img-thumbnail img-responsive" height="155px" width="155px">
+							</div>
+							<div class="media-body">
+								<h4 align="left">Quos et illa ut quam</h4>
+								<a href="#"><span class="label label-warning label-xs">Project Manager</span></a>
+								<p>Ignem ratio fingo istam etc vix una velut veris deo. Teneri habeam perire putavi to cogito sentio me ac. Ad potuisse in ne supponit loquendo me. Sed vixque rei verbis dicunt dat jam. Animal angeli sumpti animum cau exigui sim figura duo ita. Ad attingere objectiva pertinent an si abducerem.</p>
+								<p>Apta volo ac ea etsi. Assentiar quantitas apparebat tribuebam age existimem his hic. Quae fal jam imo modo tur scio. Verum ita falli cap cum nonne fas. Ipse omne ejus male cum aut aspi. Studiose efficere ex materiam obtinent de quanquam. Tamque nec forsan secedo egisse uno solius. Deteriorem sui cohaereant suo pensitatis immortalem.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-content">
+				<div class="col-xs-12">
+					<div class="separator">
+						<div class="left-separator"></div>
+						<div class="cog">
+							<div class="gear-wrapper">
+								<span class="fa fa-gear fa-2x "></span>
+							</div>
+						</div>
+						<div class="right-separator"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row row-content">
+				<div class="col-xs-12 col-sm-12">
+					<h2>Facts &amp; Figures</h2>
+					<div class="table-condensed">
+						<table class="table table-hover">
+							<tr>
+								<td>
+									<th>
+										2014
+									</th>
+									<th>
+										2015
+									</th>
+									<th>
+										2016
+									</th>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									Employees
+								</th>
+								<td>
+									3
+								</td>
+								<td>
+									5
+								</td>
+								<td>
+									8
+								</td>
+							</tr>
+							<tr>
+								<th>
+									Customers Served
+								</th>
+								<td>
+									83
+								</td>
+								<td>
+									435
+								</td>
+								<td>
+									943
+								</td>
+							</tr>
+							<tr>
+								<th>
+									Special Events
+								</th>
+								<td>
+									3
+								</td>
+								<td>
+									9
+								</td>
+								<td>
+									12
+								</td>
+							</tr>
+							<tr>
+								<th>
+									Annual Turnover
+								</th>
+								<td>
+									€6,525
+								</td>
+								<td>
+									€13,375
+								</td>
+								<td>
+									~€25,000
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-content">
+				<div class="col-xs-12">
+					<div class="separator">
+						<div class="left-separator"></div>
+						<div class="cog">
+							<div class="gear-wrapper">
+								<span class="fa fa-gear fa-2x "></span>
+							</div>
+						</div>
+						<div class="right-separator"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-12">
+				<h2 align="left">Business card</h2>
+				<div class="panel panel-primary">
+					<div class="panel-heading bg-one">
+						<h3 class="panel-title">Geno Co</h3>
+					</div>
+					<div class="panel-body bg-four">
+						<dl class="dl-horizontal">
+							<div class="col-xs-10 col-sm-5">
+								<dt>Started: </dt>
+								<dd class="left-side">25 August 2014</dd>
+								<dt>Head: </dt>
+								<dd class="left-side">Chernikov Georgii</dd>
+								<dt>Last Year's Turnover: </dt>
+								<dd class="left-side">€24,375</dd>
+								<dt>Employees: </dt>
+								<dd class="left-side">eight</dd>
+								<dt>Address: </dt>
+								<dd class="left-side">Kokkola, Vidnasinkatu 67100</dd>
+							</div>
+							<a href="index.html">
+								<img src="img/apple-icon-180x180.png" class="media-object img-responsive" align="right">
+							</a>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-content">
+				<div class="col-xs-12">
+					<div class="separator">
+						<div class="left-separator"></div>
+						<div class="cog">
+							<div class="gear-wrapper">
+								<span class="fa fa-gear fa-2x "></span>
+							</div>
+						</div>
+						<div class="right-separator"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-content">
+				<div class="col-xs-12 col-sm-12">
+					<h2 align="left">Events</h2>
+					<div class="panel-group" id="accordion" role="tablist">
+						<div class="panel, panel-default">
+							<div class="panel-heading" role="tab" id="headingPeter">
+								<h3 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#peter">
+										The city of lost child 2016
+										<small>Costumes, Accessories</small>
+									</a>
+								</h3>
+							</div>
+							<div role="tabpanel" class="panel-collapse collapse" id="peter">
+								<div class="panel-body">
+									<div class="media-left media-middle">
+										<img src="img/poster.jpg" class="media-object img-thumbnail img-responsive" height="305px" width="305px">
+									</div>
+									<div class="media-body">
+										<h4 align="left">Remotam to praeter ut nutriri usitate</h4>
+										<a href="#"><span class="label label-default label-xs">Gallery</span></a>
+										<p>Ens colligi timenda etc priorem judicem. De quascunque ii at contingere repugnaret explicetur intellectu. Adjuvetis hoc fortassis suspicari opportune obversari vix eam. Dei praemia prudens hominum iii constet requiri haberem. Ima sane nemo modi fuit lus pro dem haud. Vestro age negare tactum hoc cui lor. Ne et ut quod id soli soni deus. At constare innumera is occurret ea. Nia calebat seu acquiro fraudem effingo dicimus.</p>
+										<p>Ad inquiram constare si diversis generali profecta. Clara leone et prima ex. Agendum insuper sui lus uti scripta proinde eae plausum subesse. Certas etc calida opinio qualia vul suo cogito rom paucos. Objectioni mutationum eo attendendo varietates facillimum id ad. Adjuvetis tam deciperer conflatos aut rei exhibetur ibi consuetae. Quare puram eae est dicam ima. Excludat se ex tangatur machinae alicujus.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel-heading" role="tab" id="headingDanny">
+								<h3 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#denny">
+										Comic Con Moscow 2017
+										<small>Dishonored II stand</small>
+									</a>
+								</h3>
+							</div>
+							<div role="tabpanel" class="panel-collapse collapse" id="denny">
+								<div class="panel-body">
+									<div class="media-left media-middle">
+										<img src="img/costume.jpg" class="media-object img-thumbnail img-responsive" height="305px" width="305px">
+									</div>
+									<div class="media-body">
+										<h4 align="left">Generalia experimur im ex creatione opinantem conservat ecclesiae ac</h4>
+										<a href="#"><span class="label label-default label-xs">Gallery</span></a>
+										<p>Attigi aetate jam nullis ubi falsae terram realem. Rei jam discrepant iii aliquoties qua falsitatis mortalibus. Re im de terram gi omnium doctus vestro sensum. Etc persuasi monendos duo dedissem mutuatis ens hoc videamus. Fuse his male cap tria tam poni. Ibi nosse sanae agi satis ego ego. Ego dignum lumine illico debere hoc.</p>
+										<p>Suo placet sumque curant hic ubi. Sua carnem hac qua mem saltem falsum. Tanta simus fas solae iii ipsum annos. Fruebatur dum naturales sui praefatio ope extitisse. Ens ubi hoc statuendum expectanti facillimum objectivus aucupantur. Disputo de mutuari is obscure me. Operae hac dicere volunt nec pileos judico dividi. Ut addo nota id fide. Ut vi igni sane vita in ulla.</p>									</div>
+								</div>
+							</div>
+							<div class="panel-heading" role="tab" id="headingAgumb">
+								<h3 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#agumb">
+										Festival of thematic photo
+										<small>San Diego 2014</small>
+									</a>
+								</h3>
+							</div>
+							<div role="tabpanel" class="panel-collapse collapse" id="agumb">
+								<div class="panel-body">
+									<div class="media-left media-middle">
+										<img src="img/photo.jpg" class="media-object img-thumbnail img-responsive" height="305px" width="305px">
+									</div>
+									<div class="media-body">
+										<h4 align="left">Cap hominem diverso conabor ita conatus dispari nec necesse</h4>
+										<a href="#"><span class="label label-default label-xs">Gallery</span></a>
+										<p>Eos cogitantur sum aliquandiu contingere. Explicui callidus gi profecto actiones addamque collecta si. Mecum signa erant serie novas et ut. Fundamenta mo facultatem ha is diligenter durationis. Aliquam mea aperire scripti dicerem usu erumpam quodque sed. Deceptorem aliquamdiu hac pro praesertim ita. Alios ferre famam agi dat quasi ferri ideis. Quicquam rem diversae concipio sap sessione rom recordor ita. Is ab reddat angeli ex latere realem mendax cetera.</p>
+										<p>Sopitum purpura sentiat si gi co. Missae de procul to se ob juvare. Satyriscos continetur vigilantes ac pauperrimi ea de complector ut. Operi his illum mem viris spero terea. Si aliquamdiu intelligam qualitates ii inusitatis. Aetatem habetur odoratu ultimam si vi in validas dignati. Erat rari nudi tam iii duo.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel-heading" role="tab" id="headingAlberto">
+								<h3 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#alberto">
+										Helloween private party
+										<small>Chicago 2015</small>
+									</a>
+								</h3>
+							</div>
+							<div role="tabpanel" class="panel-collapse collapse" id="alberto">
+								<div class="panel-body">
+									<div class="media-left media-middle">
+										<img src="img/group.jpg" class="media-object img-thumbnail img-responsive" height="305px" width="305px">
+									</div>
+									<div class="media-body">
+										<h4 align="left">Missae habent angeli hos deo dat</h4>
+										<a href="#"><span class="label label-default label-xs">Gallery</span></a>
+										<p>Dubitem imo nia similia mei futurus ostendi sum gallico. At ii omnes mutuo verae pauci. Aberrem et quamvis in to exhibet. Exhibet incipit et sentiat ut. Facultate dimoveret est sit cognoscam has. Reddere ut colores sternat creando peccato vi ac. Impellit generali sui vos sequitur ejusmodi hoc imo.</p>
+										<p>Confidam sit contumax meo res timerent utrimque parentes. Spectentur notionibus ego imaginandi imaginarer tantummodo hoc sum. Liceat rum juncta notior platea res. Ii bile nolo eram vidi scio to id. Negavi sensum agi falsis sed ignota sua vix. At ei idcirco co at motarum figuras divinae reddere. Obnoxius im animalia ferventi ad de callidum.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<footer class="row-footer" style="background-color:#222">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-xs-4 col-sm-2 white" style="margin-top:45px">
+						<address>
+							<i class="fa fa-university" aria-hidden="true"></i> : 2, Vidnäsinkatu, Kokkola, 67100<br>
+							<i class="fa fa-phone"></i> : +358 466 26 32 87<br>
+							<i class="fa fa-envelope"></i> :
+							<a href="mailto:genco@design.net">genco@design.net</a>
+						</address>
+					</div>
+
+					<div class="col-xs-4 col-sm-4 pull-right">
+						<div class="nav navbar-nav" style="padding: 40px 10px;">
+							<a class="btn btn-social-icon btn-google-pluse" href="http://google.com/+">
+								<i class="fa fa-google-plus"></i>
+							</a>
+							<a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id=">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/">
+								<i class="fa fa-linkedin"></i>
+							</a>
+							<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/">
+								<i class="fa fa-twitter"></i>
+							</a>
+							<a class="btn btn-social-icon btn-youtube" href="http://youtube.com/">
+								<i class="fa fa-youtube"></i>
+							</a>
+							<a class="btn btn-social-icon" href="mailto:">
+								<i class="fa fa-envelope-o"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12">
+
+						<p align="center" class="white">© Copyright 2017 GenoCo</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>
